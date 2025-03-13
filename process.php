@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         "fputs", "fputscsv", "fwrite", "fpassthru", "require", "include", "mkdir", "strip_tags",
         "substr", "strtolower", "strrev", "get_defined_functions", "rmdir", "symlink", "touch",
         "unlink", "umask", "call_user_func", "str_rot13", "hex2bin", "urldecode", "rawurldecode", 
-        "gzdecode", "str_replace", "implode"
+        "gzdecode", "str_replace", "implode" 
     );
 
     if (strpos($expression, "::") !== false) {

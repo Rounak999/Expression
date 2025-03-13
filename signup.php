@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $token = base64_encode($tokenValue);
 
                 // Hash the password
-                $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
+                $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
                 // Insert user into the database
                 $insertQuery = "INSERT INTO users (userid, password, token) VALUES ($1, $2, $3)";
@@ -154,7 +154,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body>
     <div class="ctf-container">
-        <h1 class="ctf-title">🚀 Sign Up for Math Solver CTF</h1>
+        <h1 class="ctf-title">🚀 Sign Up</h1>
 
         <div class="ctf-box">
             <?php if (isset($error)) echo "<p class='ctf-error'>$error</p>"; ?>
@@ -166,6 +166,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <button type="submit" class="ctf-button">Register</button>
             </form>
             <p class="ctf-text">Already have an account? <a href="index.php" class="ctf-link">Login</a></p>
+            <p class="ctf-text">Forgot Password? <a href="forgot_password.php" class="ctf-link">Forgot password</a></p>
         </div>
     </div>
 </body>

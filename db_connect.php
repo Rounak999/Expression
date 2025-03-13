@@ -1,7 +1,7 @@
 <?php
-$servername = "172.31.160.1";
-$username = "rounak";
-$password = "rounak";
+$servername = "expression_db";
+$username = "rounakadmin";
+$password = "rounakadmin";
 $dbname = "expression";
 
 // Create connection

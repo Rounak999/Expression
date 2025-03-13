@@ -1,5 +1,13 @@
 <?php
 session_start();
+if (!isset($_SESSION['username'])) {
+    header("Location: login.php");
+    exit();
+}
+if ($_SESSION['username'] !== 'admin') {
+    header("Location: user.php");
+    exit();
+}
 $target = rand(1000, 9999); // Random target number for the challenge
 $_SESSION['target'] = $target;
 ?>
